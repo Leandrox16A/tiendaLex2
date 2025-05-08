@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de conveniencia Lex</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://live.staticflickr.com/7732/17370998581_ea866def09_h.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            background-color: #529c62;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            font-size: 3em;
+        }
+        .menu {
+            text-align: center;
+            background-color: #dd3232;
+            padding: 10px;
+        }
+        .menu a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            margin: 20px auto;
+            width: 80%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 200px;
+            padding: 15px;
+            text-align: center;
+        }
+        .product img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .product button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #218838;
+        }
+        .cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Tienda de conveniencia Lex</h1>
+</div>
+<div class="menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#entrega">Entrega</a>
+    <a href="#contacto">Contáctanos</a>
+</div>
+<div class="container" id="inicio">
+    <h2>Bienvenidos a Tienda de conveniencia Lex</h2>
+    <p>Tienda de conveniencia Lex, es la tienda que necesitabas. Tenemos los mejores productos de la ciudad tanto importados como exportados. Priorizamos la calidad y cantidad hasta la puerta de su casa, de nuestro local fisico o nuestro local en linea. Nos encontramos en el colegio "Nicolás Infante Díaz" donde tanto estudiantes como maestros ofrecemos nuestros servicios.</p>
+    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/ngrlcECZEp0?si=POkPiqCLN3x4bCmw" title="YouTube video player" frameborder="0" allowfullscreen></iframe></center>
+</div>
+
+<div class="container" id="productos">
+    <h2>Productos</h2>
+
+    <div class="product-list" id="productContainer"></div>
+    <center><button onclick="finalizarCompra()">Finalizar Compra</button></center>
+</div>
+
+<div class="container" id="entrega">
+    <h2>Entrega</h2>
+    <p>¡Entregas brillantes, solo en Tienda de conveniencia Lex!</p>
+
+<p>En Tienda de conveniencia Lex, combinamos lo mejor de dos mundos: la atención cercana de nuestra tienda física y la comodidad insuperable de nuestras compras en línea. Ya sea que nos visites en persona o hagas tu pedido desde casa, nuestra misión es llevarte los productos que amas de forma rápida, segura y con una sonrisa.
+
+¿Lo mejor? Todas las compras superiores a $50 tienen entrega totalmente GRATIS. Sin cargos ocultos, sin letra pequeña. Solo buenos productos, buen servicio y un ahorro directo para ti.</p>
+
+<p>Y si quieres ver cómo hacemos posible todo esto, no te pierdas el nuevo video de nuestro repartidor estrella, quien además de ser un empleado comprometido, ¡es también un youtuber apasionado! En su más reciente video, Luis te lleva detrás de escena para mostrarte el corazón de nuestras entregas: desde la preparación del pedido hasta el momento en que toca tu puerta. Una experiencia auténtica, divertida y 100% Lex."</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vrBv1Q5bXt4?si=9VRUJ8a2FekS6Wc_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+</div>
+
+<div class="container" id="contacto">
+    <h2>Contáctanos</h2>
+<IMG SRC="Lex Company.GIF" WIDTH=500 HEIGHT=230 ALIGN="Left">
+    <form class="contact-form">
+        
+        <p>
+        <label>Nombre:<input type="text" required></label><br>
+        </p>
+        <p>
+        <label>Correo:<input type="email" required></label><br>
+        </p>
+        <p>
+        <label>Dirección:<input type="text" required></label><br>
+        </p>
+        <p>
+        <label>Teléfono:<input type="tel" required></label><br>
+        </p>
+        <p>
+        <label>Método de Pago:
+        </p>
+
+            <select required>
+                <option>Tarjeta</option>
+                <option>PayPal</option>
+                <option>Transferencia</option>
+            </select>
+        </label><br>
+        <input type="submit" value="Realizar Compra">
+    </form>
+</div>
+
+<div class="cart" id="cart">
+    <h4>Carrito</h4>
+    <div id="cartItems"></div>
+    <p>Total: $<span id="cartTotal">0</span></p>
+</div>
+
+<script>
+    const productos = [
+        {nombre: "Cereal Kellogg's", precio: 3, imagen: "https://www.supermaxi.com/wp-content/uploads/2024/08/items2Figm2F1000x10002F7591057001056-1.jpg", categoria: "Alimentos"},
+        {nombre: "Licuadora Oster", precio: 45, imagen: "https://osterla.vteximg.com.br/arquivos/ids/159311-700-700/BLSTKAG-RPB-11.jpg?v=638331636348470000/", categoria: "Electrodomésticos"},
+        {nombre: "iPhone 13", precio: 799, imagen: "https://think-ecuador.com/wp-content/uploads/2021/10/0160300772-10-600x600.jpeg", categoria: "Tecnología"},
+        {nombre: "Laptop HP 14", precio: 620, imagen: "https://hp.widen.net/content/nzl1ssdyga/png/nzl1ssdyga.png?w=800&dpi=72&color=ffffff00", categoria: "Tecnología"},
+        {nombre: "Detergente Ariel", precio: 5, imagen: "https://i5.walmartimages.com/seo/Ariel-Laundry-Detergent-1-Pack_35d05755-186b-477b-ad20-7068025213ac.efccec3df48c675f52ee67854cc4ea7d.jpeg", categoria: "Limpieza"},
+        {nombre: "Shampoo Pantene", precio: 4, imagen: "https://www.supermaxi.com/wp-content/uploads/2024/08/items2Figm2F1000x10002F7501001169091-1-3.jpg.webp", categoria: "Cuidado Personal"},
+        {nombre: "Agua Ciel 1L", precio: 1, imagen: "https://chedrauimx.vtexassets.com/arquivos/ids/46742766/7501055310883_00.jpg?v=638798409139900000", categoria: "Bebidas"},
+        {nombre: "Pepsi 2L", precio: 2, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/81797_G.jpg", categoria: "Bebidas"},
+        {nombre: "Plancha Black+Decker", precio: 30, imagen: "https://www.artefacta.com/media/catalog/product/1/4/142952_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1040&width=1040&canvas=1040:1040", categoria: "Electrodomésticos"},
+        {nombre: "Pasta Colgate", precio: 2, imagen: "https://www.fybeca.com/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_FybecaEcuador/default/dwd4a122c3/images/large/231256_1.jpg?sw=1000&sh=1000", categoria: "Cuidado Personal"},
+        {nombre: "Hilo dental", precio: 6, imagen: "https://www.pharmacys.com.ec/wcsstore/DF_CatalogAsset/images/catalog/producto/fullimage/97527P-1.jpg", categoria: "Cuidado Personal"},
+        {nombre: "Sandwichera Hamilton Beach", precio: 40, imagen: "https://http2.mlstatic.com/D_NQ_NP_629303-MLA80700601402_112024-O.webp", categoria: "Electrodomésticos"},
+        {nombre: "Freidora de aire Oster", precio: 99, imagen: "https://osterla.vtexassets.com/arquivos/ids/159467-800-auto?v=638353083933070000", categoria: "Electrodomésticos"},
+        {nombre: "Lavadora Samsung 15kg", precio: 680, imagen: "https://http2.mlstatic.com/D_NQ_NP_658375-MLU78082121334_082024-O.webp", categoria: "Electrodomésticos"},
+        {nombre: "Secadora Whirlpool", precio: 520, imagen: "https://www.artefacta.com/media/catalog/product/1/2/121775.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1040&width=1040&canvas=1040:1040", categoria: "Electrodomésticos"},
+        {nombre: "Tostadora Black+Decker", precio: 22, imagen: "https://almacenesmirna.com.ec/wp-content/uploads/2023/10/7100980-2.jpg", categoria: "Electrodomésticos"},
+        {nombre: "Mouse Logitech M170", precio: 15, imagen: "https://lavictoria.ec/wp-content/uploads/2023/06/MOUSE-INALAMBRICO-M170-910-004940-LOGITECH-1-600x600.webp", categoria: "Tecnología"},
+        {nombre: "Teclado Redragon Kumara", precio: 45, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA8Yp3JzzfZK9I8huJUq5VY6ZOKTUD2LVQPg&s", categoria: "Tecnología"},
+        {nombre: "Router TP-Link Archer C6", precio: 50, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEiu3MlT1GRl-EXbJhXC-efZEFHL4zHh2ZCQ&s", categoria: "Tecnología"},
+        {nombre: "Disco Duro Externo 1TB", precio: 85, imagen: "https://coretms.tecnomegastore.ec/assets/images/lg/18/HDDADA1TBHD710L-1-lg.webp", categoria: "Tecnología"},
+        {nombre: "Memoria USB 64GB", precio: 8, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm4FUeDG2Je8EFBUnZX0WB5Pz7PhjTlNBhag&s", categoria: "Tecnología"},
+        {nombre: "Zumo de Naranja Andina", precio: 1.4, imagen: "https://r.bolder.run/23053/medium/857058-7802820700053.png", categoria: "Bebidas"},
+        {nombre: "Agua Perrier", precio: 1.7, imagen: "https://www.vinoslafavorita.com/cdn/shop/files/AGUAPERRIER_1@2x.jpg?v=1691546023", categoria: "Bebidas"},
+        {nombre: "Cerveza Club Premium", precio: 1.5, imagen: "https://36580daefdd0e4c6740b-4fe617358557d0f7b1aac6516479e176.ssl.cf1.rackcdn.com/products/31133.41295.jpg", categoria: "Bebidas"},
+        {nombre: "Whisky Johnnie Walker Red", precio: 24, imagen: "https://lataberna.com.ec/guayaquil/urdesa/6254-small_default/johnnie-walker-red-label-1l.jpg", categoria: "Bebidas"},
+        {nombre: "Leche de Almendras Silk", precio: 3.3, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa58MDtCvux209t9KV75L0sOyRAL3L24Hgjg&s", categoria: "Bebidas"},
+        {nombre: "Cepillo para ropa", precio: 1.9, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/28806_G.jpg", categoria: "Limpieza"},
+        {nombre: "Desinfectante Lysol", precio: 4.2, imagen: "https://leonisa.ec/cdn/shop/files/LYL0003_001_1200X1500_1_480x.jpg?v=1731437272", categoria: "Limpieza"},
+        {nombre: "Papel Higiénico Familia", precio: 5, imagen: "https://www.supermaxi.com/wp-content/uploads/2024/08/items2Figm2F1000x10002F7861003110157-1.jpg", categoria: "Limpieza"},
+        {nombre: "Ambientador Glade", precio: 2.6, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT59y5ebVXRt7ezaTnhBgjv3_lNEVtOOq3PMQ&s", categoria: "Limpieza"},
+        {nombre: "Quitamanchas Vanish", precio: 4.7, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSZC6-IeF8McpekoOHUs9u5V_iWOf45DkEMA&s", categoria: "Limpieza"},
+        {nombre: "Jabón líquido Lux", precio: 2.5, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ37KpD_yHdGWZBV3wTWGwEAFWbCnmciq3Wog&s", categoria: "Cuidado Personal"},
+        {nombre: "Crema dental Sensodyne", precio: 4.2, imagen: "https://www.fybeca.com/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_FybecaEcuador/default/dwcd99825c/images/large/226549_1.jpg?sw=1000&sh=1000", categoria: "Cuidado Personal"},
+        {nombre: "Maquinilla Gillette", precio: 3.6, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuxOK9JwNYrss-O19kWy1TL5bvV8E4Iiz42g&s", categoria: "Cuidado Personal"},
+        {nombre: "Pañitos húmedos Huggies", precio: 2.8, imagen: "https://pequeayuda.com/wp-content/uploads/2024/01/93359-01.jpg", categoria: "Cuidado Personal"},
+        {nombre: "Protector solar Nivea", precio: 6.5, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BNY5oV5eg3L1btzPGgRabHuEkOWo2fUvrw&s", categoria: "Cuidado Personal"},
+        {nombre: "Sopa instantánea Maruchan", precio: 0.9, imagen: "https://www.fybeca.com/on/demandware.static/-/Sites-masterCatalog_FybecaEcuador/default/dw2e489638/images/large/177385_1.jpg", categoria: "Alimentos"},
+        {nombre: "Frijoles Ducal", precio: 1.6, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAHIM2sX8E5Q59_SlAiP66bpxIhcP4XdklkQ&s", categoria: "Alimentos"},
+        {nombre: "Galletas Chokis", precio: 0.8, imagen: "https://www.fybeca.com/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_FybecaEcuador/default/dwfb8ddc4e/images/large/100125659-GALLETA-CHOKIS-CLASICA-40G-UNIDAD.JPG?sw=1000&sh=1000", categoria: "Alimentos"},
+        {nombre: "Yogur Toni Fresa", precio: 1.1, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBiIZPUlwB5G6B2nxbphDKyCUZP6nQkZjRZw&s", categoria: "Alimentos"},
+        {nombre: "Mantequilla La Danesa", precio: 2.7, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA-CnmeHIQCNT5_ZAbMmPjJ7uIUfbTOpHyFg&s", categoria: "Alimentos"},
+        {nombre: "Cereal Chocapic", precio: 3.4, imagen: "https://www.nestle-cereals.com/ec/sites/g/files/qirczx961/files/styles/1_1_768px_width/public/2023-02/CHOCAPIC%C2%AE%20RECETA%20ORIGINAL.png.webp?itok=rwnySBM9", categoria: "Alimentos"},
+        {nombre: "Sardinas Real", precio: 1.3, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/102685_G.jpg", categoria: "Alimentos"},
+        {nombre: "Sal La Fina", precio: 0.6, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZhnwmIA3kvPt-Stc7TGq2fi_wLEuGGun-kQ&s", categoria: "Alimentos"},
+        {nombre: "Azúcar Valdez", precio: 1.8, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfZc45rKueRhqdiX2qMti4cAT2MySsUYTnyA&s", categoria: "Alimentos"},
+        {nombre: "Harina de Trigo Flor", precio: 1.9, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdsE9Men_h_SWxvh8nlc3e_gbvQE6K38zu1w&s", categoria: "Alimentos"},
+        {nombre: "Gel de baño Palmolive", precio: 3, imagen: "https://www.fybeca.com/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_FybecaEcuador/default/dw863b65a3/images/large/535728_1.jpg?sw=1000&sh=1000", categoria: "Cuidado Personal"},
+        {nombre: "Crema para peinar Savilé", precio: 2.4, imagen: "https://assets.unileversolutions.com/v1/115881285.png", categoria: "Cuidado Personal"},
+        {nombre: "Queso crema Philadelphia", precio: 3.6, imagen: "https://alvicl.vtexassets.com/arquivos/ids/157073/Queso-crema-philadelphia.jpg?v=637868443502900000", categoria: "Alimentos"},
+        {nombre: "Helado Pingüino", precio: 2.5, imagen: "https://assets.unileversolutions.com/v1/1194583.jpg", categoria: "Alimentos"},
+        {nombre: "Huevos AA x12", precio: 2.9, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYsgaIvqTkgCWAW3vUngphm-D5QxiI62LXJA&s", categoria: "Alimentos"},
+        {nombre: "Vinagre La Universal", precio: 1.3, imagen: "https://www.supermaxi.com/wp-content/uploads/2024/08/items2Figm2F1000x10002F7861042550938-1-2.jpg.webp", categoria: "Alimentos"},
+        {nombre: "Zanahorias 1kg", precio: 1.2, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRC6xbuW7IuvejMHv0vD8rm7eRGxOYSKdCMw&s", categoria: "Alimentos"},
+        {nombre: "Manzanas Rojas 1kg", precio: 2.4, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWTXiTMYKU2AEhwAjkNudw93JgC_lWjLglGA&s", categoria: "Alimentos"},
+        {nombre: "Papel Aluminio Reynolds", precio: 3.8, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuSFlwebJBma6LGlEBInOMfL-KoVAn4pxPFQ&s", categoria: "Limpieza"},
+        {nombre: "Bolsa para basura 50L", precio: 2, imagen: "https://www.cofan.es/images/content/1024x682/web1_41003322_01.jpg", categoria: "Limpieza"},
+        {nombre: "Pan Bimbo Integral", precio: 2, imagen: "https://www.fybeca.com/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_FybecaEcuador/default/dw617cbe4a/images/large/100083143-PAN-BIMBO-MOLDE-INTEGRAL-100-600-GR-PAQUETE.jpg?sw=1000&sh=1000", categoria: "Alimentos"},
+        {nombre: "Café Nescafé Clásico", precio: 6, imagen: "https://images-cdn.ubuy.co.in/636a9979c602196ad346e513-nescafe-clasico-instant-coffee-clasico.jpg", categoria: "Alimentos"},
+        {nombre: "Arroz Súper Extra 5kg", precio: 8, imagen: "https://tipikofoods.com/assets/images/marcas-arroz-superextra.png", categoria: "Alimentos"},
+        {nombre: "Atún Van Camps", precio: 1.5, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/27575_G.jpg", categoria: "Alimentos"},
+        {nombre: "Leche Parmalat Entera", precio: 1.2, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/171053238_G.jpg", categoria: "Alimentos"},
+        {nombre: "Galletas Oreo", precio: 1, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPEPDEjt9tvSye--P5Hqq0w-Nl8YAK3G8nPQ&s", categoria: "Alimentos"},
+        {nombre: "Sopa Maggi Pollo", precio: 0.75, imagen: "https://www.recetasnestlecam.com/sites/default/files/styles/cookit_product/public/2023-12/sopa-de-pollo-con-fideos-55g.jpg.webp?itok=UCx5X7TQ", categoria: "Alimentos"},
+        {nombre: "Mayonesa Hellmann’s", precio: 3.5, imagen: "https://m.media-amazon.com/images/I/81MoLlbTRBL._SL1500_.jpg", categoria: "Alimentos"},
+        {nombre: "Salsa de Tomate Heinz", precio: 2.8, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZKgxPVznom75Wp_XvrpZJ0tESNqaxwac1iA&s", categoria: "Alimentos"},
+        {nombre: "Aceite Primor 1L", precio: 3, imagen: "https://miamarket.pe/assets/uploads/84485781d997cade86550666199e6bcd.jpg", categoria: "Alimentos"},
+        {nombre: "Jabón Rexona", precio: 1.2, imagen: "https://www.aki.com.ec/wp-content/uploads/2024/12/items2Figm2F1000x10002F7861001364446-1-12.jpg", categoria: "Cuidado Personal"},
+        {nombre: "Desodorante Axe", precio: 3.5, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/132101541_G.jpg", categoria: "Cuidado Personal"},
+        {nombre: "Crema Nivea Soft", precio: 4, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/168652993_G.jpg", categoria: "Cuidado Personal"},
+        {nombre: "Cepillo Oral-B", precio: 2, imagen: "https://farmaenlace.vtexassets.com/arquivos/ids/160692/0000121879-1.jpg?v=638064816247900000", categoria: "Cuidado Personal"},
+        {nombre: "Gel antibacterial", precio: 1.5, imagen: "https://www.fybeca.com/on/demandware.static/-/Sites-masterCatalog_FybecaEcuador/default/dw59d5f93c/images/large/163913-ANTIBACTERIAL-SANI-ALGODON-250-ML-FRASCO.jpg", categoria: "Cuidado Personal"},
+        {nombre: "Toalla Always Noches", precio: 3.2, imagen: "https://images.ctfassets.net/15cixv9erwrk/7ET4Haxz0cTCNoMq9RVwQR/fa71c6b88c72dd8082b255ef95cef6c2/80678788_Ehub_Always-Toallas-Noches-Tranquilas-Hiperlargas-_Seca_10toallas_1000x1000.jpg", categoria: "Cuidado Personal"},
+        {nombre: "Cloro Clorox", precio: 2, imagen: "https://ecuador.clorox.com/wp-content/uploads/sites/6/2021/02/CLX_CBX_Blnq_ECU_ORIGINAL_1040gr_alta.png", categoria: "Limpieza"},
+        {nombre: "Limpiador Mr. Músculo", precio: 3.1, imagen: "https://miguagua.ec/cdn/shop/products/7790520989106MrMGatilloBanoFront.jpg?v=1614014839", categoria: "Limpieza"},
+        {nombre: "Esponja Scotch-Brite", precio: 1.3, imagen: "https://kywiec.vtexassets.com/arquivos/ids/157212/456490.jpg?v=638380021297630000", categoria: "Limpieza"},
+        {nombre: "Trapeador Ultra", precio: 6, imagen: "https://www.tventas.com/12000815-large_default/trapeador-super-mop-pro.jpg", categoria: "Limpieza"},
+        {nombre: "Guantes de limpieza", precio: 2, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/170053244_G.jpg", categoria: "Limpieza"},
+        {nombre: "Fabuloso Lavanda", precio: 2.5, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/99540_G.jpg", categoria: "Limpieza"},
+        {nombre: "Coca-Cola 1.5L", precio: 1.8, imagen: "https://colanta.vtexassets.com/arquivos/ids/158639/409D.png?v=638549392810570000", categoria: "Bebidas"},
+        {nombre: "Gatorade Naranja", precio: 1.5, imagen: "https://www.fybeca.com/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_FybecaEcuador/default/dw19f40456/images/large/226364_1.jpg?sw=1000&sh=1000", categoria: "Bebidas"},
+        {nombre: "Red Bull 250ml", precio: 2.2, imagen: "https://farmaenlace.vtexassets.com/arquivos/ids/171503/0000134426-1.png?v=638362863441570000", categoria: "Bebidas"},
+        {nombre: "Té Lipton Limón", precio: 1.2, imagen: "https://i0.wp.com/macenio.com/wp-content/uploads/2020/12/568792_00_1.jpg?fit=510%2C510&ssl=1", categoria: "Bebidas"},
+        {nombre: "Jugo Del Valle Mango", precio: 2, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMFh2iG4kyWPGob0QYtvKcefOvswYP4wwB8Q&s", categoria: "Bebidas"},
+        {nombre: "Vino Gato Negro", precio: 9, imagen: "https://www.supermaxi.com/wp-content/uploads/2023/11/items2Figm2F1000x10002F7804300010638-1-1.jpg", categoria: "Bebidas"},
+        {nombre: "Monitor Samsung 24\"", precio: 150, imagen: "https://coretms.tecnomegastore.ec/assets/images/sindicacion/MONSAMLF24T350F/uno.webp", categoria: "Tecnología"},
+        {nombre: "Tablet Lenovo M10", precio: 180, imagen: "https://novicompu.vtexassets.com/arquivos/ids/167090/1CLEN1943.jpg?v=638168302055330000", categoria: "Tecnología"},
+        {nombre: "Auriculares JBL Tune 500", precio: 35, imagen: "https://www.artefacta.com/media/catalog/product/1/2/124796_01_6jzrltgf6gmouxht.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=1040&width=1040&canvas=1040:1040&format=jpeg", categoria: "Tecnología"},
+        {nombre: "Smartwatch Xiaomi", precio: 60, imagen: "https://lavictoria.ec/wp-content/uploads/2023/01/RELOJ-INTELIGENTE-XIAOMI-AZUL-XMWTCL02-3.jpg", categoria: "Tecnología"},
+        {nombre: "Cámara Canon EOS", precio: 520, imagen: "https://tiendafotograficaecuador.com.ec/wp-content/uploads/2024/11/Canon-EOS-T7-con-lente-18-55mm-1.jpg", categoria: "Tecnología"},
+        {nombre: "Microondas LG", precio: 130, imagen: "https://bodeguitadelahorro.com/wp-content/uploads/2024/07/Microondas-LG-42-Litros-MS1536GIR.png", categoria: "Electrodomésticos"},
+        {nombre: "Refrigeradora Mabe", precio: 420, imagen: "https://www.artefacta.com/media/catalog/product/1/4/148250.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1040&width=1040&canvas=1040:1040", categoria: "Electrodomésticos"},
+        {nombre: "Horno Tostador Oster", precio: 65, imagen: "https://lavictoria.ec/wp-content/uploads/2023/01/HORNO-TOSTADOR-OSTER-4-REB-10-LTS-TSSTTV10LTV-013-1-600x600.jpg", categoria: "Electrodomésticos"},
+        {nombre: "Ventilador Samurai", precio: 55, imagen: "https://imagedelivery.net/0tt38OLkrSmHRt7hdItWEA/9cf298ba-3110-4e7c-661f-3b3fd4e77f00/public", categoria: "Electrodomésticos"},
+        {nombre: "Café Juan Valdez Molido", precio: 14.15, imagen: "https://www.supermaxi.com/wp-content/uploads/2024/09/items2Figm2F1000x10002F7707280883868-1.jpg", categoria: "Alimento"},
+        {nombre: "Desodorante Rexona Hombre", precio: 5, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/87538_G.jpg", categoria: "Aseo Personal"},
+        {nombre: "Lavavajillas Axion Limón", precio: 4, imagen: "https://www.supermercadosantamaria.com/documents/10180/10504/47467_G.jpg", categoria: "Electrodomésticos"},
+        {nombre: "Monitor Samsung 24 FHD", precio: 338.99, imagen: "https://www.computron.com.ec/wp-content/uploads/2023/05/LF27T350FHN.jpg", categoria: "Electrodomésticos"},
+        {nombre: "Cuchillo Tramontina Chef", precio: 15, imagen: "https://assets.tramontina.com.br/upload/tramon/imagens/CUT/24472188PDM001G.jpg", categoria: "Electrodomésticos"},
+        {nombre: "Cerveza Heineken 6 pack", precio: 7, imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTirdxbEHYfti-erv4A2zC0UzgdxOTXdiI5WA&s", categoria: "Electrodomésticos"},
+        {nombre: "Gel Fijador Ego Extremo", precio: 6.70, imagen: "https://www.supermaxi.com/wp-content/uploads/2024/08/items2Figm2F1000x10002F7861001362091-1-1.jpg", categoria: "Electrodomésticos"},
+        {nombre: "Galletas Ritz", precio: 0.40, imagen: "https://www.supermaxi.com/wp-content/uploads/2024/08/items2Figm2F1000x10002F7622300737719-1-4.jpg.webp", categoria: "Electrodomésticos"},
+        {nombre: "Galletas Maria", precio: 1.13, imagen: "https://www.nestle.com.ec/sites/g/files/pydnoa396/files/styles/webp_image/public/2025-04/HMI_BOLSA%20MARIA%20LARGA%20HMI.jpg.webp?itok=AEjk-z3B", categoria: "Electrodomésticos"},
+// ...agrega productos, cerca de 92 para adelante
+    ];
+
+    let carrito = [];
+
+    function renderProductos() {
+        const contenedor = document.getElementById('productContainer');
+        productos.forEach((prod, index) => {
+            const card = document.createElement('div');
+            card.className = 'product';
+            card.innerHTML = `
+                <img src="${prod.imagen}" alt="${prod.nombre}">
+                <h4>${prod.nombre}</h4>
+                <p>Precio: $${prod.precio}</p>
+                <button onclick="agregarAlCarrito(${index})">Comprar</button>
+            `;
+            contenedor.appendChild(card);
+        });
+    }
+
+    function agregarAlCarrito(index) {
+        const prod = productos[index];
+        carrito.push(prod);
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const lista = document.getElementById('cartItems');
+        const total = document.getElementById('cartTotal');
+        lista.innerHTML = '';
+        let suma = 0;
+        carrito.forEach(p => {
+            const item = document.createElement('p');
+            item.textContent = `${p.nombre} - $${p.precio}`;
+            lista.appendChild(item);
+            suma += p.precio;
+        });
+        total.textContent = suma;
+    }
+
+    function finalizarCompra() {
+        window.location.href = '#contacto';
+    }
+
+    renderProductos();
+</script>
+</body>
+</html>
+
+
